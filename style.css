@@ -1,0 +1,167 @@
+:root {
+    --primary-color: rgba(84, 27, 164, 0.5);
+    --secondary-color: rgba(224, 211, 135, 0.5);
+    --hover-color: rgba(237, 168, 58, 0.5);
+}
+
+.content-background {
+    background-color: rgba(165, 163, 163, 0.434);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: background-color 0.3s, transform 0.3s ease; 
+    
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1); 
+}
+
+
+.navbar {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.navbar ,.nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar ,.nav-link:hover {
+    color: var(--hover-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: rgb(253, 253, 253);
+    margin: 0;
+    padding: 0;
+    background-image: url('Toy World Logo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(84, 27, 164, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: rgba(97, 95, 95, 0.3);
+}
+/* تبويبات الملف الشخصي */
+.profile-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.profile-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+}
+
+.profile-tab.active {
+    background-color: var(--hover-color);
+}
+
+/* بطاقات المنتجات */
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+   
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px; /* شكل أجمل لو حبيت */
+    
+}
+
+/* تسجيل الدخول */
+.alert {
+    margin-bottom: 20px;
+}
+/* عربة التسوق */
+.cart-badge {
+    position: relative;
+}
+
+.cart-badge .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.6em;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.table th {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255,255,255,0.1);
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+input, button {
+    margin: 5px 0;
+    padding: 10px;
+}
